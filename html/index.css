@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    background-color: #463f3a;
+    list-style-type: none;
+    text-align: center;
+    Padding: 0px;
+Margin: 0px;
+
+}
+li{
+    text-size-adjust: 24px;
+line-height: 40px;
+    display: inline-block;
+    Height: 40px;
+    Padding: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+div{
+    height: 90%;
+    background-color: #bcb8b1;
+}
+footer{
+    background-color: #463f3a;
+    color: white;
+    text-align: center;
+}
+p{
+    font-size: 25px;
+}
+#mydiv{
+    padding-bottom:300px;
+}

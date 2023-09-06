@@ -1,0 +1,13 @@
+<form>
+  form elements
+</form>
+
+<input type = "text">       hiển thị 1 dòng nhập văn bản
+<input type = "radio">      hiển thị nút radio (để chọn 1 trong nhiều tr lựa chọn)         - ô tròn
+<input type = "checkbox">   hiển thị một hộp kiểm (để chọn không hoặc nhiều lựa chọn)      - ô vuông
+<input type = "submit">     hiển thị nút gửi (để gửi biểu mẫu)
+<input type = "button">     hiển thị nút có thể nhấp
+
+*attribute Name
+mỗi trường đầu vào phải có 1 attribute cần gửi (name)
+nếu attribute bị bỏ qua , value của trường đầu vào sẽ hoàn toàn không được gửi

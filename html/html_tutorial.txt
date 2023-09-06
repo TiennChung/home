@@ -1,0 +1,190 @@
+cú pháp : html:5 - đây là 1 thân bài mẫu
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+* trích dẫn
+<p> : thẻ đoạn văn
+<blockquote   cite ="link">  định nghĩa 1 phần tử được trích dẫn từ nguồn khác 
+<q> : dùng cho các trích dẫn ngắn
+<abbr title = "bro">a</abbr> : a được định nghĩa viết tắt cho bro - khi di chuột qua ta sẽ thấy 
+<address> : thẻ xác định thông tin , thông tin bên trong sẽ được in nghiêng 
+<bdo dỉ ="rtl"> : Bi-Directional Override - thẻ ghi ngược lại : ví dụ <bdo>abc</bdo> -> cba
+
+
+<h1> -> <h6> : thẻ tiêu đề
+
+<a> : thẻ link  
+1 số thuộc tính của target
+_seft : thuộc tính mặc định - mở trang mới trong cùng 1 tab
+_blank : mở trang mới trên 1 tab mới
+_parent : mở tài liệu trong khung cha
+_top : mở tài liệu trong toàn bộ nội dung của cửa sổ 
+- khi href = địa chỉ gmail - nó sẽ mở liên kết đến email của ng dùng để gửi tin nhắn cho địa chỉ gmail kia
+khi <a href =  title = ></a> - khi di chuột qua sẽ hiện ra nội dung của title
+
+<img> : thẻ hình ảnh  - thuộc tính  alt : cho phép bạn nhìn thấy tên đại diện cho ảnh khi k load được ảnh
+<img> cho phép các gif - hình ảnh động
+*image maps
+  * ví dụ 
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">  // ảnh gốc
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">  - kích vào pc
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm"> - kích vào phone
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm"> - kích vào coffee   - sẽ mở ra trang khác
+    </map>
+    Một khu vực có thể nhấp được xác định bằng cách sử dụng một phần tử.<area>
+    shape = : 
+    rect : định nghĩa 1 vùng chữ nhật
+    circle : định nghĩa 1 vùng tròn
+    poly : định nghĩa 1 vùng đa giác
+    default : xác định toàn bộ khu vực 
+*background-image : Để tránh hình nền lặp lại, hãy đặt thuộc tính đến background-repeat : no-repeat
+
+
+<br> : làm ngắt dòng - và nó k cần thẻ đóng
+<hr> : tạo ra 1 đường nét liền ngăn cách nội dung same as <br>
+<pre> : 1 thẻ tuân thủ quy tắc cách đều, khoảng trắng , xuống dòng 
+
+
+* định dạng văn bản
+<b> : văn bản in đậm
+<strong> : văn bản qtrong - nội dung bên trong được in đậm hơn <b>
+<i> : văn bản in nghiêng
+<em> : văn bản nhấn mạnh
+<mark> : văn bản được đánh dấu - đánh dấu màu quanh phần được đánh dấu
+<small> : vản bản nhỏ hơn - cỡ chữ nhỏ hơn p 
+<del> : văn bản đã xóa - đánh dấu bằng cách gạch ngang giữa chữ
+<ins> : chèn văn bản  - gạch chân bên dưới 
+<sub> : văn bản chỉ số dưới - tức phần được đánh dấu thấp hơn đoạn văn bản
+<sup> : văn bản chỉ số trên - tức phần được đánh dấu cao hơn đoạn văn bản
+
+* tạo thẻ đánh dấu
+<h2 id =  "c4">Chapter 4</h2>
+<a href = "#c4">Jump to chapter 4</a> // nó sẽ chỉ đến đoạn có đánh dấu c4
+
+
+* table
+<td> : dữ liệu 1 ô 
+<tr> : 1 dòng
+<th> : tiêu đề bảng
+
+tạo viền các ô dữ liệu 
+table, th, td {
+  border: 1px solid black;
+   border-collapse: collapse; // bỏ đi đường viền kép
+} 
+- áp dụng border-style như bình thường
+
+<table style = "width : 100%"> chiều rộng bảng = 100 % so với màn hình
+  <caption> : thêm chú thích vào bảng
+  <tr> 
+     <td  style = "width : 70%"> chiều rộng cột đầu tiên bằng 70% so với màn hình
+     </td>
+     ...
+  </tr>
+  ...
+</table>
+ border-spacing : khoảng cách giữa các ô
+ clospan = "2" - phần tử đó chiếm 2 ô trong bảng - chỉ có 1 ô thay đổi
+ rowspan = "2" - phần tử của cả cột đó có kích thước 2 ô
+nth-child(even/odd) - thay đổi các thuộc tính trong các hàng (chẵn/ lẻ )
+tr:nth-child(even) - thay đổi cho hàng chẵn
+td:nth-child(even), th:nth-child(even) - thay đổi cho cột chẵn
+
+thay đổi attribute 1 hàng khi di chuột qua
+tr:hover
+
+<colgroup>
+  <col span ="2" style ="background-color : blue"> - chọn 2 cột đầu của bảng và tô màu xanh
+  <col span ="2" style ="background-color : green"> - chọn 2 cột tiếp của bảng
+  <col span ="2" style ="visibility: collapse"> - ẩn 2 cột tiếp theo
+</colgroup>
+
+
+* html list
+<ul> : danh sách không thứ tự
+có thuộc tính list-style-type : 
+dirc   : đánh dấu bằng chấm tròn đen
+circle : đánh dấu bằng vòng tròn
+square : đánh dấu bằng hình vuông
+none   : không có đánh dấu
+
+<ol> : danh sách có thứ tự
+có thuộc tính type :
+1  : danh sách được đánh dấu bằng số
+A  : danh sách được đánh dấu bằng chữ in hoa
+a  : danh sách được đánh dấu bằng chữ thường
+I  : danh sách được đánh dấu bằng số la mã hoa
+i  : danh sách được đánh dấu bằng số la mã thường
+attribute : start = 50 - đánh dấu từ số 50
+
+- danh sách mô tả
+<dl>                         : thẻ xác định danh sách mô tả
+<dd>Coffee</dd>              : thẻ xác định thuật ngữ
+<dt>- black hot drink</dt>   : thẻ mô tả từng thuật ngữ
+</dl>
+
+
+Block-level Elements : phần tử bắt đầu trên 1 dòng mới
+<address>     <article>     <aside>        <blockquote>     <canvas>          <dd>    
+<div>         <dl>          <dt>           <fieldset>       <figcaption>      <figure>
+<footer>      <form>        <h1>-<h6>      <header>         <hr>              <li>
+<main>        <nav>         <noscript>     <ol>             <p>               <pre>
+<section>     <table>       <tfoot>        <ul>             <video>           
+<footer> : nội dung cho chân trang
+<nav> : quy tất cả về 1 hàng
+
+Inline Elements : phần tử k bắt đầu trên dòng mới
+<a>        <abbr>      <acronym>    <b>       <bdo>      <big>    
+<br>       <button>    <cite>       <code>    <dfn>      <em>
+<i>        <img>       <input>      <kbd>     <label>    <map>
+<object>   <output>    <q>          <samp>    <script>   <select>
+<small>    <span>      <strong>     <sub>     <sup>      <textarea>
+<time>     <tt>        <var>          
+<span> thường được dùng để đánh dấu 1 phần văn bản
+
+.class
+#id
+gọi trực tiếp thẻ
+
+
+// đường dẫn ảnh 
+../picture.jpg
+
+
+*Head HTML
+title : tiêu đề trên tap trắng
+<link rel = "stylesheet" herf = "mystyle.css"> // liên kết đến file css
+<meta> : Phần tử thường được sử dụng để chỉ định bộ ký tự, mô tả trang, từ khóa, tác giả của tài liệu, và cài đặt chế độ xem
+Xác định bộ ký tự được sử dụng:
+<meta charset="UTF-8">
+
+Xác định từ khóa cho công cụ tìm kiếm:
+<meta name="keywords" content="HTML, CSS, JavaScript">
+
+Xác định mô tả trang web của bạn:
+<meta name="description" content="Free Web tutorials">
+
+Xác định tác giả của một trang:
+<meta name="author" content="John Doe">
+
+Làm mới tài liệu sau mỗi 30 giây:
+<meta http-equiv="refresh" content="30">
+
+Đặt chế độ xem để làm cho trang web của bạn trông đẹp mắt trên tất cả các thiết bị:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Cài đặt khung nhìn
+Chế độ xem là vùng hiển thị của người dùng trên một trang web. Nó thay đổi theo thiết bị - nó sẽ nhỏ hơn trên điện thoại di động so với trên màn hình máy tính.
+Bạn nên bao gồm yếu tố sau trong tất cả các trang web của mình:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
